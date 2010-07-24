@@ -1,0 +1,7 @@
+aclocal.m4
+*.o
+*.lo
+*.a
+*.la
+.deps
+.libs
