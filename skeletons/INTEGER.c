@@ -27,6 +27,8 @@ asn_TYPE_descriptor_t asn_DEF_INTEGER = {
 #ifdef	ASN_DISABLE_PER_SUPPORT
 	0,
 	0,
+	0,
+	0,
 #else
 	INTEGER_decode_uper,	/* Unaligned PER decoder */
 	INTEGER_encode_uper,	/* Unaligned PER encoder */
@@ -905,8 +907,6 @@ INTEGER_encode_uper(asn_TYPE_descriptor_t *td,
 	ASN__ENCODED_OK(er);
 }
 
-#endif	/* ASN_DISABLE_PER_SUPPORT */
-
 asn_enc_rval_t
 INTEGER_encode_aper(asn_TYPE_descriptor_t *td,
 	asn_per_constraints_t *constraints, void *sptr, asn_per_outp_t *po) {
@@ -1029,6 +1029,8 @@ INTEGER_encode_aper(asn_TYPE_descriptor_t *td,
 
 	_ASN_ENCODED_OK(er);
 }
+
+#endif	/* ASN_DISABLE_PER_SUPPORT */
 
 int
 asn_INTEGER2long(const INTEGER_t *iptr, long *lptr) {
