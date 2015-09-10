@@ -1035,8 +1035,8 @@ _LT_EOF
 ])
 
 
-# _LT_DARWIN_LINKER_FEATURES
-# --------------------------
+# _LT_DARWIN_LINKER_FEATURES([TAG])
+# ---------------------------------
 # Checks for linker and compiler features on darwin
 m4_defun([_LT_DARWIN_LINKER_FEATURES],
 [
