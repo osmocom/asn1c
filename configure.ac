@@ -7,7 +7,7 @@ AC_CONFIG_MACRO_DIR([m4])
 
 AM_MAINTAINER_MODE
 
-AM_PROG_AR
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 AM_PROG_LIBTOOL
 
 dnl Checks for programs.
