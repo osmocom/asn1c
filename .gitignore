@@ -70,6 +70,9 @@ doc/docsrc/*.xdv
 # /libasn1parser/
 /libasn1parser/Makefile
 /libasn1parser/check_parser
+/libasn1parser/asn1p_l.c
+/libasn1parser/asn1p_y.c
+/libasn1parser/asn1p_y.h
 
 # /libasn1print/
 /libasn1print/Makefile
