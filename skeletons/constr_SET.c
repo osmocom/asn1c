@@ -253,11 +253,8 @@ SET_decode_ber(const asn_codec_ctx_t *opt_codec_ctx,
 				BER_TLV_CONSTRUCTED(ptr),
 				(const char *)ptr + tag_len, LEFT - tag_len);
 
-			switch(skip) {
-			case 0: if(!SIZE_VIOLATION) RETURN(RC_WMORE);
-				/* Fall through */
-			case -1: RETURN(RC_FAIL);
-			}
+			if(skip == 0 && !SIZE_VIOLATION) RETURN(RC_WMORE);
+			if(skip <= 0) RETURN(RC_FAIL);
 
 			ADVANCE(skip + tag_len);
 			continue;  /* Try again with the next tag */
