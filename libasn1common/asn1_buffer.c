@@ -164,7 +164,7 @@ vasprintf(char **ret, const char *fmt, va_list args) {
         *ret = NULL;
         assert(suggested >= 0); /* Can't function like this */
     }
-    va_end(args);
+    va_end(copy);
 
     return actual_length;
 }
