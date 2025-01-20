@@ -443,7 +443,7 @@ SET_encode_der(const asn_TYPE_descriptor_t *td, const void *sptr, int tag_mode,
 	int t2m_build_own = (specs->tag2el_count != td->elements_count);
 	const asn_TYPE_tag2member_t *t2m;
 	asn_TYPE_tag2member_t *t2m_build;
-	size_t t2m_count;
+	size_t t2m_count = 0;
 	ssize_t ret;
 	size_t edx;
 
@@ -454,7 +454,6 @@ SET_encode_der(const asn_TYPE_descriptor_t *td, const void *sptr, int tag_mode,
         t2m_build = (asn_TYPE_tag2member_t *)CALLOC(td->elements_count,
                                                     sizeof(t2m_build[0]));
         if(!t2m_build) ASN__ENCODE_FAILED;
-		t2m_count = 0;
 	} else {
 		t2m_build = NULL;
 		/*
