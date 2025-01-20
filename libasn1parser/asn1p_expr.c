@@ -30,6 +30,10 @@ asn1p_expr_set_source(asn1p_expr_t *expr, asn1p_module_t *module, int lineno) {
 
 int
 asn1p_expr_compare(const asn1p_expr_t *a, const asn1p_expr_t *b) {
+    if (a == b) {
+        return 0;
+    }
+
     if((a && !b) || (!a && b)) {
         return -1;
     }
