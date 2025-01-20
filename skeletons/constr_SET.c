@@ -134,7 +134,7 @@ SET_decode_ber(const asn_codec_ctx_t *opt_codec_ctx,
 	 * Restore parsing context.
 	 */
 	ctx = (asn_struct_ctx_t *)((char *)st + specs->ctx_offset);
-	
+
 	/*
 	 * Start to parse where left previously
 	 */
@@ -274,7 +274,7 @@ SET_decode_ber(const asn_codec_ctx_t *opt_codec_ctx,
 				td->name, elements[edx].name, edx);
 			RETURN(RC_FAIL);
 		}
-		
+
 		/*
 		 * Compute the position of the member inside a structure,
 		 * and also a type of containment (it may be contained
@@ -311,7 +311,7 @@ SET_decode_ber(const asn_codec_ctx_t *opt_codec_ctx,
 		case RC_FAIL: /* Fatal error */
 			RETURN(RC_FAIL);
 		} /* switch(rval) */
-		
+
 		ADVANCE(rval.consumed);
 	  }	/* for(all structure members) */
 
@@ -386,7 +386,7 @@ SET_decode_ber(const asn_codec_ctx_t *opt_codec_ctx,
 
 		NEXT_PHASE(ctx);
 	}
-	
+
 	RETURN(RC_OK);
 }
 
